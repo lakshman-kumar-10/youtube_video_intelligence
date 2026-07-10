@@ -26,3 +26,11 @@ llm:
 audio:
   music_min_duration_seconds: 3.0
   music_energy_percentile: 65
+  mood_sample_rate: 22050
+  mood_minimum_score: 0.25
+  mood_max_labels: 2
+  yamnet_enabled: true
+  yamnet_sample_rate: 16000
+  yamnet_model_url: https://tfhub.dev/google/yamnet/1
+  yamnet_confidence_threshold: 0.20
+  yamnet_max_events: 8

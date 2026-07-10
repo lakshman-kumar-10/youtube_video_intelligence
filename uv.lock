@@ -4015,6 +4015,20 @@ wheels = [
 ]
 
 [[package]]
+name = "tensorflow-hub"
+version = "0.16.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "protobuf" },
+    { name = "tf-keras" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e5/50/00dba77925bf2a0a1e45d7bcf8a69a1d2534fb4bb277d9010bd148d2235e/tensorflow_hub-0.16.1-py2.py3-none-any.whl", hash = "sha256:e10c184b3d08daeafada11ffea2dd46781725b6bef01fad1f74d6634ad05311f", size = 30771, upload-time = "2024-01-30T14:49:07.005Z" },
+]
+
+[[package]]
 name = "termcolor"
 version = "3.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -4449,6 +4463,7 @@ dependencies = [
     { name = "scikit-learn", version = "1.7.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "scikit-learn", version = "1.9.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "soundfile" },
+    { name = "tensorflow-hub" },
     { name = "tf-keras" },
     { name = "ultralytics" },
     { name = "uv" },
@@ -4480,6 +4495,7 @@ requires-dist = [
     { name = "scenedetect", extras = ["opencv"], specifier = ">=0.6.4" },
     { name = "scikit-learn", specifier = ">=1.5.0" },
     { name = "soundfile", specifier = ">=0.12.1" },
+    { name = "tensorflow-hub", specifier = ">=0.16.1" },
     { name = "tf-keras", specifier = ">=2.21.0" },
     { name = "ultralytics", specifier = ">=8.2.0" },
     { name = "uv", specifier = ">=0.11.28" },

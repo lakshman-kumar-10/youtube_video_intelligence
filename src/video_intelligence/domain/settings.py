@@ -50,6 +50,14 @@ class LlmSettings:
 class AudioSettings:
     music_min_duration_seconds: float = 3.0
     music_energy_percentile: int = 65
+    mood_sample_rate: int = 22_050
+    mood_minimum_score: float = 0.25
+    mood_max_labels: int = 2
+    yamnet_enabled: bool = True
+    yamnet_sample_rate: int = 16_000
+    yamnet_model_url: str = "https://tfhub.dev/google/yamnet/1"
+    yamnet_confidence_threshold: float = 0.20
+    yamnet_max_events: int = 8
 
 
 @dataclass(frozen=True)

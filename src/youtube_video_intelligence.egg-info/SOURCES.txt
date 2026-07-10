@@ -10,6 +10,7 @@ src/video_intelligence/domain/ports.py
 src/video_intelligence/domain/settings.py
 src/video_intelligence/infrastructure/__init__.py
 src/video_intelligence/infrastructure/audio/__init__.py
+src/video_intelligence/infrastructure/audio/audio_mood_analyzer.py
 src/video_intelligence/infrastructure/audio/librosa_music_detector.py
 src/video_intelligence/infrastructure/audio/simple_mood_analyzer.py
 src/video_intelligence/infrastructure/llm/__init__.py
@@ -33,5 +34,7 @@ src/youtube_video_intelligence.egg-info/entry_points.txt
 src/youtube_video_intelligence.egg-info/requires.txt
 src/youtube_video_intelligence.egg-info/top_level.txt
 tests/test_analysis.py
+tests/test_audio_mood_analyzer.py
 tests/test_repository.py
+tests/test_segmentation.py
 tests/test_video_extract.py
