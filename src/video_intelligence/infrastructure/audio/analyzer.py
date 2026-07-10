@@ -7,7 +7,7 @@ from .events import NullAudioEventDetector, YamnetAudioEventDetector
 from .features import LibrosaAudioFeatureExtractor
 from .loaders import LibrosaAudioClipLoader
 from .mood import WeightedMoodScorer
-from .models import AudioEvent
+from .models import AudioEvent, AudioFeatures
 from .protocols import AudioClipLoader, AudioEventDetector, AudioFeatureExtractor, MoodScorer
 
 
