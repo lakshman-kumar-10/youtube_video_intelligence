@@ -3,7 +3,7 @@
 Python project for selecting one YouTube video and producing:
 
 - Audio-aware shot start and stop times.
-- Audio-aware scene start and stop times.
+- Audio-aware scene start and stop times with adjacent-shot grouping.
 - LLM scene descriptions under 100 words.
 - Scene-wise face crops.
 - Similar-face groups with scene-wise emotions.
@@ -59,7 +59,7 @@ The final report is written to `runs/sample/analysis.json`; face crops are under
 
 ## Notes
 
-- Shot and scene boundaries are refined using both visual cuts and audio transitions so start/stop times remain aligned with the soundtrack.
+- Shot boundaries use PySceneDetect `AdaptiveDetector` by default and are refined against nearby audio transitions.
+- Scene boundaries group adjacent shots with lightweight visual histogram similarity plus audio-transition strength, so scenes are not treated as only higher-threshold cuts.
 - The default object detector uses YOLOv8, face/emotion grouping uses DeepFace, and descriptions use the OpenAI API.
 - Heavy ML libraries may download model weights on first run.
-

@@ -14,10 +14,16 @@ class VideoSettings:
 
 @dataclass(frozen=True)
 class SegmentationSettings:
+    shot_detector: str = "adaptive"
+    scene_detector: str = "semantic"
     shot_threshold: float = 18.0
+    shot_adaptive_threshold: float = 3.0
+    shot_min_content_value: float = 15.0
     scene_threshold: float = 30.0
     min_scene_seconds: float = 2.0
     audio_boundary_window_seconds: float = 0.75
+    scene_visual_similarity_threshold: float = 0.55
+    scene_audio_boundary_threshold: float = 0.65
 
 
 @dataclass(frozen=True)
@@ -68,4 +74,3 @@ class AppSettings:
             llm=LlmSettings(**data.get("llm", {})),
             audio=AudioSettings(**data.get("audio", {})),
         )
-

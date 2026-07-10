@@ -2,10 +2,16 @@ video:
   max_resolution: 720
   working_filename: source.mp4
 segmentation:
+  shot_detector: adaptive
+  scene_detector: semantic
   shot_threshold: 18.0
+  shot_adaptive_threshold: 3.0
+  shot_min_content_value: 15.0
   scene_threshold: 30.0
   min_scene_seconds: 2.0
   audio_boundary_window_seconds: 0.75
+  scene_visual_similarity_threshold: 0.55
+  scene_audio_boundary_threshold: 0.65
 faces:
   detector_backend: opencv
   emotion_backend: opencv
@@ -20,4 +26,3 @@ llm:
 audio:
   music_min_duration_seconds: 3.0
   music_energy_percentile: 65
-

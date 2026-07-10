@@ -7,3 +7,5 @@ __pycache__/
 *.pt
 .env
 tests/data/
+.vscode
+runs/
