@@ -6,7 +6,7 @@ Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 Requires-Dist: click>=8.1.7
 Requires-Dist: numpy>=1.26.0
-Requires-Dist: opencv-python>=4.9.0
+Requires-Dist: opencv-python==4.13.0.92
 Requires-Dist: pydantic>=2.7.0
 Requires-Dist: pyyaml>=6.0.1
 Requires-Dist: scenedetect[opencv]>=0.6.4

@@ -32,4 +32,6 @@ src/youtube_video_intelligence.egg-info/dependency_links.txt
 src/youtube_video_intelligence.egg-info/entry_points.txt
 src/youtube_video_intelligence.egg-info/requires.txt
 src/youtube_video_intelligence.egg-info/top_level.txt
+tests/test_analysis.py
 tests/test_repository.py
+tests/test_video_extract.py

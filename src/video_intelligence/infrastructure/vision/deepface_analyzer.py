@@ -109,7 +109,8 @@ class DeepFaceAnalyzer:
                 detector_backend=self._settings.detector_backend,
                 enforce_detection=False,
             )
-        except Exception:
+        except Exception as e:
+            print(repr(e))
             return crops
 
         for item in extracted:

@@ -1,6 +1,6 @@
 click>=8.1.7
 numpy>=1.26.0
-opencv-python>=4.9.0
+opencv-python==4.13.0.92
 pydantic>=2.7.0
 pyyaml>=6.0.1
 scenedetect[opencv]>=0.6.4
