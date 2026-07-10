@@ -1,0 +1,609 @@
+{
+  "video": {
+    "source_url": "https://www.youtube.com/watch?v=ei9Z4jPBQK0",
+    "path": "runs\\sample\\source.mp4",
+    "title": "Abhishek Bachchan's Best Dialogues from Guru | Aishwarya Rai",
+    "duration": 210.0
+  },
+  "shots": [
+    {
+      "index": 1,
+      "timerange": {
+        "start": 0.0,
+        "end": 8.614603174603175
+      }
+    },
+    {
+      "index": 2,
+      "timerange": {
+        "start": 8.614603174603175,
+        "end": 14.605351473922903
+      }
+    },
+    {
+      "index": 3,
+      "timerange": {
+        "start": 14.605351473922903,
+        "end": 17.136326530612244
+      }
+    },
+    {
+      "index": 4,
+      "timerange": {
+        "start": 17.136326530612244,
+        "end": 19.71374149659864
+      }
+    },
+    {
+      "index": 5,
+      "timerange": {
+        "start": 19.71374149659864,
+        "end": 32.62403628117914
+      }
+    },
+    {
+      "index": 6,
+      "timerange": {
+        "start": 32.62403628117914,
+        "end": 38.93986394557823
+      }
+    },
+    {
+      "index": 7,
+      "timerange": {
+        "start": 38.93986394557823,
+        "end": 42.887256235827664
+      }
+    },
+    {
+      "index": 8,
+      "timerange": {
+        "start": 42.887256235827664,
+        "end": 49.5978231292517
+      }
+    },
+    {
+      "index": 9,
+      "timerange": {
+        "start": 49.5978231292517,
+        "end": 54.381133786848075
+      }
+    },
+    {
+      "index": 10,
+      "timerange": {
+        "start": 54.381133786848075,
+        "end": 56.47092970521542
+      }
+    },
+    {
+      "index": 11,
+      "timerange": {
+        "start": 56.47092970521542,
+        "end": 63.36725623582767
+      }
+    },
+    {
+      "index": 12,
+      "timerange": {
+        "start": 63.36725623582767,
+        "end": 66.36263038548753
+      }
+    },
+    {
+      "index": 13,
+      "timerange": {
+        "start": 66.36263038548753,
+        "end": 71.1459410430839
+      }
+    },
+    {
+      "index": 14,
+      "timerange": {
+        "start": 71.1459410430839,
+        "end": 73.11963718820861
+      }
+    },
+    {
+      "index": 15,
+      "timerange": {
+        "start": 73.11963718820861,
+        "end": 88.58412698412698
+      }
+    },
+    {
+      "index": 16,
+      "timerange": {
+        "start": 88.58412698412698,
+        "end": 100.05478458049886
+      }
+    },
+    {
+      "index": 17,
+      "timerange": {
+        "start": 100.05478458049886,
+        "end": 113.7081179138322
+      }
+    },
+    {
+      "index": 18,
+      "timerange": {
+        "start": 113.7081179138322,
+        "end": 116.58739229024944
+      }
+    },
+    {
+      "index": 19,
+      "timerange": {
+        "start": 116.58739229024944,
+        "end": 124.6679365079365
+      }
+    },
+    {
+      "index": 20,
+      "timerange": {
+        "start": 124.6679365079365,
+        "end": 125.5502947845805
+      }
+    },
+    {
+      "index": 21,
+      "timerange": {
+        "start": 125.5502947845805,
+        "end": 127.47755102040816
+      }
+    },
+    {
+      "index": 22,
+      "timerange": {
+        "start": 127.47755102040816,
+        "end": 137.34603174603174
+      }
+    },
+    {
+      "index": 23,
+      "timerange": {
+        "start": 137.34603174603174,
+        "end": 145.63555555555556
+      }
+    },
+    {
+      "index": 24,
+      "timerange": {
+        "start": 145.63555555555556,
+        "end": 150.27954648526077
+      }
+    },
+    {
+      "index": 25,
+      "timerange": {
+        "start": 150.27954648526077,
+        "end": 165.9762358276644
+      }
+    },
+    {
+      "index": 26,
+      "timerange": {
+        "start": 165.9762358276644,
+        "end": 210.08333333333334
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "index": 1,
+      "timerange": {
+        "start": 0.0,
+        "end": 8.614603174603175
+      },
+      "description": "The video scene shows a calm and steady conversation between two people. The man on the right, wearing a cap and jacket, is smiling and looking at the other person. A truck and a body of water are visible in the background. The mood is dark, yet calm. The objects labeled are a person, a tie (not visible), and a truck (not clearly visible). The scene is set in a dock or pier area. The video likely showcases a character's dialogue, referred to as \"Guru Bhai's Power-packed Dialogues\". The overall atmosphere remains calm and steady throughout the scene.",
+      "mood": [
+        "calm",
+        "dark",
+        "steady"
+      ],
+      "objects": [
+        "person",
+        "tie",
+        "truck"
+      ],
+      "faces": []
+    },
+    {
+      "index": 2,
+      "timerange": {
+        "start": 8.614603174603175,
+        "end": 14.605351473922903
+      },
+      "description": "The video shows two men. The first frame depicts a calm conversation between them. The mood shifts to dark and tense as the second man speaks. The video ends with the second man looking at the first man with a serious expression. The setting transitions from a serene outdoor location to an industrial area. A person's upper body and a tie are visible. The camera remains steady throughout.",
+      "mood": [
+        "calm",
+        "dark",
+        "steady"
+      ],
+      "objects": [
+        "person",
+        "tie"
+      ],
+      "faces": []
+    },
+    {
+      "index": 3,
+      "timerange": {
+        "start": 14.605351473922903,
+        "end": 17.136326530612244
+      },
+      "description": "The scene shows a man in a suit and tie talking to another person. The mood is calm and dark, with a sense of fast-paced conversation. The man in the suit appears to be speaking intently. The background shows a blue sky and industrial structures. A frisbee is not present in the scene. The video cuts to another frame with a man wearing a cap and holding some papers. Overall, the scene is fast-paced and intense, with a sense of urgency conveyed through the interactions between the characters.",
+      "mood": [
+        "calm",
+        "dark",
+        "fast"
+      ],
+      "objects": [
+        "person",
+        "tie",
+        "frisbee"
+      ],
+      "faces": []
+    },
+    {
+      "index": 4,
+      "timerange": {
+        "start": 17.136326530612244,
+        "end": 19.71374149659864
+      },
+      "description": "The video scene shows two men engaged in a conversation. The man on the right wears a gray jacket and cap, while the man on the left wears a suit and tie. The mood is calm and steady, with a hint of dark tension. The background features a cityscape and blue sky, suggesting an urban setting. The atmosphere remains subdued throughout the scene, with the two individuals interacting in a measured tone. The steady camera captures their exchange, conveying a sense of quiet intensity.",
+      "mood": [
+        "calm",
+        "dark",
+        "steady"
+      ],
+      "objects": [
+        "person",
+        "tie"
+      ],
+      "faces": []
+    },
+    {
+      "index": 5,
+      "timerange": {
+        "start": 19.71374149659864,
+        "end": 32.62403628117914
+      },
+      "description": "The scene shows two men engaged in a conversation. The man on the left wears a suit and tie, while the man on the right wears a flat cap and a gray jacket. They stand outside, with industrial structures and a body of water in the background. The mood is calm yet fast. A third man with an umbrella is not present in these frames. Overall, the scene appears to be a still moment from a movie or TV show, capturing a tense yet calm conversation between two characters. The scene takes place from 19.71 to 32.62 seconds.",
+      "mood": [
+        "calm",
+        "dark",
+        "fast"
+      ],
+      "objects": [
+        "person",
+        "tie",
+        "umbrella"
+      ],
+      "faces": []
+    },
+    {
+      "index": 6,
+      "timerange": {
+        "start": 32.62403628117914,
+        "end": 38.93986394557823
+      },
+      "description": "The video scene shows a still shot of two men talking. The man on left, wearing a suit and tie, is shown from the chest up. The man on the right wears a wool cap and coat. The man on the left stares at the man on the right with an intense look. The man on the left has brown hair, a gray suit jacket, white collared shirt, and a black tie. A tennis racket handle is visible in frame 1. The background features an industrial setting with large metal structures and a clear blue sky. The mood is calm,",
+      "mood": [
+        "calm",
+        "dark",
+        "steady"
+      ],
+      "objects": [
+        "person",
+        "tie",
+        "tennis racket"
+      ],
+      "faces": []
+    },
+    {
+      "index": 7,
+      "timerange": {
+        "start": 38.93986394557823,
+        "end": 42.887256235827664
+      },
+      "description": "The scene shows two men engaged in a conversation. The man on the left has dark hair and wears a gray jacket and hat, while the man on the right sports a light-colored suit and tie. The background features industrial structures and a body of water. The mood is bright and calm, with a steady pace. The frames depict a close-up of the men's faces. Object labels include \"person.\" The overall atmosphere suggests a serious yet composed discussion between the two individuals.",
+      "mood": [
+        "bright",
+        "calm",
+        "steady"
+      ],
+      "objects": [
+        "person"
+      ],
+      "faces": []
+    },
+    {
+      "index": 8,
+      "timerange": {
+        "start": 42.887256235827664,
+        "end": 49.5978231292517
+      },
+      "description": "The video shows a still scene from a movie or TV show. A man with a white cap and yellow vest speaks to another person with short brown hair. The background features a blue wall with a framed picture and a brown-framed window. He appears to be expressing anger or frustration. The mood is steady and bright with a touch of calmness. The notable object present is a tie which appears to be missing.",
+      "mood": [
+        "bright",
+        "calm",
+        "steady"
+      ],
+      "objects": [
+        "person",
+        "tie"
+      ],
+      "faces": []
+    },
+    {
+      "index": 9,
+      "timerange": {
+        "start": 49.5978231292517,
+        "end": 54.381133786848075
+      },
+      "description": "The video shows a close-up shot of a man looking to his right with a serious expression. \nThe frames show the same man in a crowd with similar expressions on their faces. \nThe object label is a person. \nThe mood words are bright, calm, and fast. The scene conveys a sense of intensity and focus, with the man's gaze fixed on something or someone off-screen. The fast mood suggests a sense of urgency or energy. Overall, the scene appears to be a dramatic or intense moment in the video.",
+      "mood": [
+        "bright",
+        "calm",
+        "fast"
+      ],
+      "objects": [
+        "person"
+      ],
+      "faces": []
+    },
+    {
+      "index": 10,
+      "timerange": {
+        "start": 54.381133786848075,
+        "end": 56.47092970521542
+      },
+      "description": "The video scene shows a close-up of a man's face, with another man partially visible behind him. The man in focus has dark hair and wears a light-colored shirt. He appears to be speaking or reacting. The mood is calm and steady. A bright light illuminates the scene. The object label is 'person'. The man maintains his expression throughout.",
+      "mood": [
+        "bright",
+        "calm",
+        "steady"
+      ],
+      "objects": [
+        "person"
+      ],
+      "faces": []
+    },
+    {
+      "index": 11,
+      "timerange": {
+        "start": 56.47092970521542,
+        "end": 63.36725623582767
+      },
+      "description": "The video shows a close-up shot of a man with dark hair and light skin, surrounded by other people. The man is wearing a green shirt and has a neutral expression on his face. He appears to be looking at something off-screen with curiosity. The background is blurred, but it appears to be an indoor setting with several people standing around. The mood seems calm and steady. The overall atmosphere suggests that the man is observing something with interest.",
+      "mood": [
+        "bright",
+        "calm",
+        "steady"
+      ],
+      "objects": [
+        "person"
+      ],
+      "faces": []
+    },
+    {
+      "index": 12,
+      "timerange": {
+        "start": 63.36725623582767,
+        "end": 66.36263038548753
+      },
+      "description": "The video scene shows a close-up of a man with dark hair and a serious expression. He appears to be speaking or reacting to something. The mood is calm, dark, and steady. The man is the main object in the frame. The scene captures a tense moment, possibly from a dramatic or action movie. The man's expression and the blurred background suggest a sense of intensity. The overall atmosphere is somber and focused.",
+      "mood": [
+        "calm",
+        "dark",
+        "steady"
+      ],
+      "objects": [
+        "person"
+      ],
+      "faces": []
+    },
+    {
+      "index": 13,
+      "timerange": {
+        "start": 66.36263038548753,
+        "end": 71.1459410430839
+      },
+      "description": "The video scene shows a man in a suit holding a gun, followed by a man in a brown shirt with another person behind him. The mood shifts from calm and steady to dark. The man in the suit has a tie and sunglasses in frame 1. The man in the brown shirt appears in frames 2 and 3, with a similar setting and mood. Overall, the scene appears to be a dramatic and intense moment in the video, with a focus on the individuals and their interactions.",
+      "mood": [
+        "calm",
+        "dark",
+        "steady"
+      ],
+      "objects": [
+        "person",
+        "tie"
+      ],
+      "faces": []
+    },
+    {
+      "index": 14,
+      "timerange": {
+        "start": 73.11963718820861,
+        "end": 88.58412698412698
+      },
+      "description": "The scene shows a man sitting in a boat, then in a convertible with men surrounding him. He holds a cup and looks around. The mood shifts from fast with dark shadows to calm. The man interacts with the crowd. At 73.12-88.58s, the setting changes rapidly. The man appears contemplative. A cup is present. The boat and convertible are key. The mood changes are fast, dark, then calm.",
+      "mood": [
+        "calm",
+        "dark",
+        "fast"
+      ],
+      "objects": [
+        "person",
+        "cup",
+        "boat"
+      ],
+      "faces": []
+    },
+    {
+      "index": 15,
+      "timerange": {
+        "start": 88.58412698412698,
+        "end": 100.05478458049886
+      },
+      "description": "The video scene shows a man in a brown suit sitting in a black convertible, surrounded by other men. The mood is bright and calm, but fast. The man is looking down, then looks up. In the second frame, he appears to be speaking or reacting quickly. The objects visible include a bowl-like object on a shelf in the background, a tie is not visible but the man is wearing a suit. Overall, the scene appears to be a dramatic or intense moment in a movie or TV show.",
+      "mood": [
+        "bright",
+        "calm",
+        "fast"
+      ],
+      "objects": [
+        "person",
+        "bowl",
+        "tie"
+      ],
+      "faces": []
+    },
+    {
+      "index": 16,
+      "timerange": {
+        "start": 100.05478458049886,
+        "end": 113.7081179138322
+      },
+      "description": "The video shows a close-up shot of a man with dark hair, wearing a brown jacket. He appears to be looking at something or someone. The background features several people standing behind him, with their upper bodies visible. His expressions change from neutral to smiling and then to a more serious or concerned look. The mood shifts from bright and calm to more subdued. Overall, the video captures a brief moment of a person interacting or observing.",
+      "mood": [
+        "bright",
+        "calm",
+        "steady"
+      ],
+      "objects": [
+        "person"
+      ],
+      "faces": []
+    },
+    {
+      "index": 17,
+      "timerange": {
+        "start": 113.7081179138322,
+        "end": 116.58739229024944
+      },
+      "description": "The scene shows a close-up of a man with dark hair and a serious expression. The mood is calm, dark, and steady. He appears to be looking at someone or something with a sense of concern. The man is the primary object label in the scene, and there is no baseball glove visible. The atmosphere remains subdued throughout.",
+      "mood": [
+        "calm",
+        "dark",
+        "steady"
+      ],
+      "objects": [
+        "person",
+        "baseball glove"
+      ],
+      "faces": []
+    },
+    {
+      "index": 18,
+      "timerange": {
+        "start": 116.58739229024944,
+        "end": 124.6679365079365
+      },
+      "description": "The video shows a man speaking. The scene starts with a close-up on a man with slicked back hair wearing a brown pinstripe suit jacket looking left with a serious expression. Then cuts to a man in a tan jacket looking to the left smiling as he speaks. The final frame shows the man from a closer angle still smiling. The mood is fast and bright as the man speaks intensely and the angle cuts quickly. There are people in the background.",
+      "mood": [
+        "bright",
+        "calm",
+        "fast"
+      ],
+      "objects": [
+        "person"
+      ],
+      "faces": []
+    },
+    {
+      "index": 19,
+      "timerange": {
+        "start": 124.6679365079365,
+        "end": 137.34603174603174
+      },
+      "description": "The video scene shows a man looking at someone. The man is wearing a brown shirt and has a calm expression on his face. \n\nThe scene then transitions to a group of people standing in a room, with a man in a white shirt and another man in a gray jacket pointing at someone. The mood shifts to dark and steady, with the presence of a bottle in someone's hand suggesting a tense atmosphere. Overall, the scene appears to be a dramatic moment from a movie.",
+      "mood": [
+        "calm",
+        "dark",
+        "steady"
+      ],
+      "objects": [
+        "person",
+        "tie",
+        "bottle"
+      ],
+      "faces": []
+    },
+    {
+      "index": 20,
+      "timerange": {
+        "start": 137.34603174603174,
+        "end": 150.27954648526077
+      },
+      "description": "The scene shows a dark room. A man wearing a suit and a tie interacts with someone in a suit. A group of men wearing white tops are present in the background. A clock on the wall ticks fast. The man smiles as the fast-ticking clock looms. The mood is calm despite the fast-ticking clock.",
+      "mood": [
+        "calm",
+        "dark",
+        "fast"
+      ],
+      "objects": [
+        "person",
+        "tie",
+        "clock"
+      ],
+      "faces": []
+    },
+    {
+      "index": 21,
+      "timerange": {
+        "start": 150.27954648526077,
+        "end": 165.9762358276644
+      },
+      "description": "The scene captures a man sitting on a chair with a smile on his face. \nThe man is smiling and appears relaxed. A chair and lush greenery are visible in the background.\nThe mood of the scene remains **bright**, **calm** and **fast**. As the scene progresses, there is minimal movement, mainly just the man sitting and continuing to talk. The man remains the central **person** throughout.",
+      "mood": [
+        "bright",
+        "calm",
+        "fast"
+      ],
+      "objects": [
+        "person",
+        "chair"
+      ],
+      "faces": []
+    },
+    {
+      "index": 22,
+      "timerange": {
+        "start": 165.9762358276644,
+        "end": 210.08333333333334
+      },
+      "description": "The video scene shows a man sitting then walking outside. He initially sits in a chair and then walks quickly outside. The scene begins with the man sitting in a chair, looking concerned and sitting calmly. He then walks outside quickly with a sense of urgency. The background changes from a calm house setting to a fast-paced outdoor environment with a car and buildings visible. The mood shifts from calm to fast.",
+      "mood": [
+        "calm",
+        "dark",
+        "fast"
+      ],
+      "objects": [
+        "person",
+        "chair",
+        "car"
+      ],
+      "faces": []
+    }
+  ],
+  "face_groups": [],
+  "background_music": [
+    {
+      "timerange": {
+        "start": 52.59319727891157,
+        "end": 55.65823129251701
+      },
+      "confidence": 1.0
+    },
+    {
+      "timerange": {
+        "start": 198.2984126984127,
+        "end": 209.9548299319728
+      },
+      "confidence": 1.0
+    }
+  ]
+}

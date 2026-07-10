@@ -1,0 +1,23 @@
+video:
+  max_resolution: 720
+  working_filename: source.mp4
+segmentation:
+  shot_threshold: 18.0
+  scene_threshold: 30.0
+  min_scene_seconds: 2.0
+  audio_boundary_window_seconds: 0.75
+faces:
+  detector_backend: opencv
+  emotion_backend: opencv
+  similarity_threshold: 0.72
+  frame_sample_rate_seconds: 1.0
+objects:
+  model_name: yolov8n.pt
+  confidence: 0.35
+  frame_sample_rate_seconds: 1.0
+llm:
+  model: gpt-4.1-mini
+audio:
+  music_min_duration_seconds: 3.0
+  music_energy_percentile: 65
+
