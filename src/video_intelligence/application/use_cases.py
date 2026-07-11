@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from video_intelligence.domain.models import Scene, VideoAnalysis, VideoAsset
+from video_intelligence.domain.models import FaceGroup, Scene, VideoAnalysis, VideoAsset
 from video_intelligence.domain.ports import (
     AnalysisRepository,
     FaceAnalyzer,
@@ -40,8 +40,7 @@ class AnalyzeYoutubeVideoUseCase:
         scenes = self._add_scene_intelligence(video, scenes, output_dir)
         scenes = self.face_analyzer.extract_faces(video, scenes, output_dir / "faces")
 
-        all_faces = [face for scene in scenes for face in scene.faces]
-        face_groups = self.face_analyzer.group_faces(all_faces)
+        face_groups = self._group_faces_by_scene(scenes)
         background_music = self.music_detector.detect_background_music(video, scenes)
 
         analysis = VideoAnalysis(
@@ -52,6 +51,26 @@ class AnalyzeYoutubeVideoUseCase:
             background_music=background_music,
         )
         return self.repository.save(analysis, output_dir)
+
+    def _group_faces_by_scene(self, scenes: list[Scene]) -> list[FaceGroup]:
+        face_groups: list[FaceGroup] = []
+
+        for scene in scenes:
+            scene_face_groups = self.face_analyzer.group_faces(scene.faces)
+            face_groups.extend(
+                self._scope_face_group_to_scene(scene.index, group)
+                for group in scene_face_groups
+            )
+
+        return face_groups
+
+    @staticmethod
+    def _scope_face_group_to_scene(scene_index: int, group: FaceGroup) -> FaceGroup:
+        return FaceGroup(
+            group_id=f"scene_{scene_index:03d}_{group.group_id}",
+            faces=group.faces,
+            scene_emotions=group.scene_emotions,
+        )
 
     def _add_scene_intelligence(
         self, video: VideoAsset, scenes: list[Scene], output_dir: Path
