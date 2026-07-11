@@ -47,7 +47,7 @@ class ObjectSettings:
 
 @dataclass(frozen=True)
 class LlmSettings:
-    model: str = "meta-llama/llama-4-scout-17b-16e-instruct"
+    model: str = "qwen/qwen3.5-397b-a17b"
 
 
 @dataclass(frozen=True)

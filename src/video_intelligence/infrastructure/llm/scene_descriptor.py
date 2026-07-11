@@ -20,12 +20,12 @@ class SceneDescriptor:
                 "Install openai for LLM scene descriptions.") from exc
 
         client = OpenAI(
-            api_key=os.getenv("GROQ_API_KEY"),
-            base_url="https://api.groq.com/openai/v1",
+            api_key=os.getenv("NVIDIA_API_KEY"),
+            base_url="https://integrate.api.nvidia.com/v1",
         )
         content: list[dict[str, object]] = [
             {
-                "type": "input_text",
+                "type": "text",
                 "text": (
                     "Describe this video scene in fewer than 100 words. "
                     "Use the frames, object labels, and mood words. "
@@ -38,17 +38,19 @@ class SceneDescriptor:
         for frame_path in frame_paths[:3]:
             content.append(
                 {
-                    "type": "input_image",
-                    "image_url": f"data:image/jpeg;base64,{self._encode(frame_path)}",
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:image/jpeg;base64,{self._encode(frame_path)}"
+                    }
                 }
             )
 
-        response = client.responses.create(
+        response = client.chat.completions.create(
             model=self._settings.model,
-            input=[{"role": "user", "content": content}],
-            max_output_tokens=140,
+            messages=[{"role": "user", "content": content}],
+            max_tokens=140,
         )
-        return self._trim_to_100_words(response.output_text.strip())
+        return self._trim_to_100_words(response.choices[0].message.content.strip())
 
     @staticmethod
     def _encode(path: Path) -> str:
