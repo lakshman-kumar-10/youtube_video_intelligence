@@ -61,5 +61,5 @@ The final report is written to `runs/sample/analysis.json`; face crops are under
 
 - Shot boundaries use PySceneDetect `AdaptiveDetector` by default and are refined against nearby audio transitions.
 - Scene boundaries group adjacent shots with lightweight visual histogram similarity plus audio-transition strength, so scenes are not treated as only higher-threshold cuts.
-- The default object detector uses YOLOv8, face/emotion grouping uses DeepFace, and descriptions use the OpenAI API.
+- The default object detector uses YOLO, face crops use a YOLO nano face model, face embeddings/emotions use DeepFace, and descriptions use the OpenAI API.
 - Heavy ML libraries may download model weights on first run.

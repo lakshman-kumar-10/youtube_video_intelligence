@@ -16,6 +16,7 @@ from video_intelligence.domain.settings import FaceSettings
 class DeepFaceAnalyzer:
     def __init__(self, settings: FaceSettings) -> None:
         self._settings = settings
+        self._face_model = None
 
     def extract_faces(self, video: VideoAsset, scenes: list[Scene], output_dir: Path) -> list[Scene]:
         try:
@@ -104,24 +105,19 @@ class DeepFaceAnalyzer:
     ) -> list[FaceCrop]:
         crops: list[FaceCrop] = []
         try:
-            extracted = deepface.extract_faces(
-                img_path=frame,
-                detector_backend=self._settings.detector_backend,
-                enforce_detection=False,
-            )
+            face_boxes = self._detect_face_boxes(frame)
         except Exception as e:
             print(repr(e))
             return crops
 
-        for item in extracted:
-            face_image = item.get("face")
-            confidence = item.get("confidence")
+        for x1, y1, x2, y2, confidence in face_boxes:
+            face_image = frame[y1:y2, x1:x2]
             if face_image is None:
                 continue
-            if face_image.dtype != np.uint8:
-                face_image = np.clip(face_image * 255, 0, 255).astype(np.uint8)
+            if face_image.size == 0:
+                continue
             face_path = scene_dir / f"face_{timestamp:.2f}_{uuid4().hex[:8]}.jpg"
-            cv2.imwrite(str(face_path), cv2.cvtColor(face_image, cv2.COLOR_RGB2BGR))
+            cv2.imwrite(str(face_path), face_image)
             embedding = self._embedding(deepface, face_path)
             if not embedding:
                 continue
@@ -137,6 +133,77 @@ class DeepFaceAnalyzer:
                 )
             )
         return crops
+
+    def _detect_face_boxes(self, frame: np.ndarray) -> list[tuple[int, int, int, int, float]]:
+        model = self._load_face_model()
+        result = model.predict(frame, conf=self._settings.yolo_confidence, verbose=False)[0]
+        height, width = frame.shape[:2]
+        boxes: list[tuple[int, int, int, int, float]] = []
+
+        for box in result.boxes:
+            confidence = self._box_confidence(box)
+            if confidence < self._settings.yolo_confidence:
+                continue
+            x1, y1, x2, y2 = self._box_xyxy(box)
+            crop_box = self._expand_box(x1, y1, x2, y2, width, height)
+            if crop_box is None:
+                continue
+            boxes.append((*crop_box, confidence))
+        return boxes
+
+    def _load_face_model(self):
+        if self._face_model is not None:
+            return self._face_model
+        try:
+            from ultralytics import YOLO
+        except ImportError as exc:
+            raise RuntimeError("Install ultralytics for YOLO face detection.") from exc
+        self._face_model = YOLO(self._settings.yolo_model_name)
+        return self._face_model
+
+    def _expand_box(
+        self,
+        x1: float,
+        y1: float,
+        x2: float,
+        y2: float,
+        frame_width: int,
+        frame_height: int,
+    ) -> tuple[int, int, int, int] | None:
+        box_width = x2 - x1
+        box_height = y2 - y1
+        min_size = self._settings.min_crop_size_pixels
+        if box_width < min_size or box_height < min_size:
+            return None
+
+        padding = max(box_width, box_height) * self._settings.crop_padding_ratio
+        left = max(0, int(round(x1 - padding)))
+        top = max(0, int(round(y1 - padding)))
+        right = min(frame_width, int(round(x2 + padding)))
+        bottom = min(frame_height, int(round(y2 + padding)))
+        if right - left < min_size or bottom - top < min_size:
+            return None
+        return left, top, right, bottom
+
+    @staticmethod
+    def _box_xyxy(box) -> tuple[float, float, float, float]:
+        values = DeepFaceAnalyzer._as_flat_array(box.xyxy)
+        return float(values[0]), float(values[1]), float(values[2]), float(values[3])
+
+    @staticmethod
+    def _box_confidence(box) -> float:
+        values = DeepFaceAnalyzer._as_flat_array(box.conf)
+        return float(values[0])
+
+    @staticmethod
+    def _as_flat_array(value) -> np.ndarray:
+        if hasattr(value, "detach"):
+            value = value.detach()
+        if hasattr(value, "cpu"):
+            value = value.cpu()
+        if hasattr(value, "numpy"):
+            value = value.numpy()
+        return np.asarray(value, dtype=np.float32).reshape(-1)
 
     @staticmethod
     def _embedding(deepface, face_path: Path) -> list[float]:
@@ -164,4 +231,3 @@ class DeepFaceAnalyzer:
             return None
         analysis = result[0] if isinstance(result, list) else result
         return str(analysis.get("dominant_emotion")) if analysis.get("dominant_emotion") else None
-

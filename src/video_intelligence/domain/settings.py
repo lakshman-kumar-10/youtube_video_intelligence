@@ -30,6 +30,10 @@ class SegmentationSettings:
 class FaceSettings:
     detector_backend: str = "opencv"
     emotion_backend: str = "opencv"
+    yolo_model_name: str = "yolov8n-face.pt"
+    yolo_confidence: float = 0.55
+    crop_padding_ratio: float = 0.20
+    min_crop_size_pixels: int = 64
     similarity_threshold: float = 0.72
     frame_sample_rate_seconds: float = 1.0
 
